@@ -6,7 +6,7 @@
                 [binaryage/devtools "0.9.7"]
                 [reagent "1.1.1"]
                 [com.teknql/shadow-cljs-tailwind-jit "0.2.2"]
-                [lambdaisland/fetch "1.0.41"]]
+                [cljs-http "0.1.46"]]
 
  :builds
  {:app {:target :browser

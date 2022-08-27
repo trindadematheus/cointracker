@@ -1,13 +1,15 @@
 (ns app.core
+  (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [reagent.dom :as rdom]
-            [lambdaisland.fetch :as fetch]))
+            [cljs-http.client :as http]
+            [cljs.core.async :refer [<!]]))
 
 (def function-url (str (. js/window -location) "api/hello"))
 
 (defn- invoke-function
   []
-  (-> (fetch/get function-url)
-      (.then #(js/console.log %))))
+  (go (let [response (<! (http/get function-url))]
+        (js/console.log (:body response)))))
 
 (defn app
   []

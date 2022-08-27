@@ -19,5 +19,5 @@ node_modules
 .clj-kondo
 
 # Local Netlify folder
-.netlify
 .vercel
+api

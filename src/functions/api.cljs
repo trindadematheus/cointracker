@@ -1,5 +1,7 @@
 (ns functions.api)
 
 (defn handler
-  [_request _response]
-  (clj->js {:statusCode 200 :body "hello world"}))
+  [_request response]
+  (-> response
+      (.status 200)
+      (.send "hello world")))
