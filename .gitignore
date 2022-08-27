@@ -16,6 +16,7 @@ pom.xml.asc
 node_modules
 .shadow-cljs
 .lsp
+.clj-kondo
 
 # Local Netlify folder
 .netlify
