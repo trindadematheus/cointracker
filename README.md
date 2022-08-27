@@ -15,7 +15,7 @@ The template automatically sets up the following features that Vercel Offers:
 
 You can remove some of these features based on your use case.
 
-A demo of this repo is also available at https://cljs-demo.vercel.app
+A demo of this repo is also available at https://vercel-cljs.vercel.app/
 
 # Commands
 
