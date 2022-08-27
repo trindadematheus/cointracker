@@ -33,7 +33,7 @@
          :tailwind.css "./public/css/style.css"}}
 
   :functions {:target :node-library
-              :output-to "api/index.js"
+              :output-to "api/hello.js"
               :exports {:handler functions.api/handler}
               :js-options {:keep-native-requires true
                            :devtools {:enabled false}}}}}

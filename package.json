@@ -5,7 +5,7 @@
     "watch": "shadow-cljs watch app functions",
     "build": "shadow-cljs release app functions",
     "server": "vercel dev -l 8888",
-    "clean": "rm -rf target; rm -rf public/js/compiled; rm -rf functions/*.js",
+    "clean": "rm -rf target; rm -rf public/js/compiled; rm -rf api/*.js",
     "repl": "shadow-cljs browser-repl"
   },
   "devDependencies": {
