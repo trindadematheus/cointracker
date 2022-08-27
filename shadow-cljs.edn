@@ -34,6 +34,6 @@
 
   :functions {:target :node-library
               :output-to "api/hello.js"
-              :exports {:handler functions.api/handler}
+              :exports-var functions.api/handler
               :js-options {:keep-native-requires true
                            :devtools {:enabled false}}}}}
