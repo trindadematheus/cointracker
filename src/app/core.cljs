@@ -13,8 +13,8 @@
 
 (defn app
   []
-  [:div.py-12.bg-white
-   [:div.max-w-7xl.mx-auto.px-4
+  [:div.min-h-full.bg-white.flex.justify-center.items-center
+   [:div.flex.flex-col.justify-center.items-center.px-4
     [:div.text-center
      [:h2.text-base.text-indigo-600.font-semiboldy.tracking-wide.uppercase
       "Welcome"]
