@@ -1,5 +1,5 @@
 {
-  "name": "netlify-cljs",
+  "name": "vercel-cljs",
   "version": "0.0.1",
   "scripts": {
     "watch": "shadow-cljs watch app functions",
