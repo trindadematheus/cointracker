@@ -1,4 +1,4 @@
-(ns functions.api)
+(ns functions.hello)
 
 (defn handler
   [_request response]
