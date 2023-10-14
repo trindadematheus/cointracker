@@ -20,4 +20,3 @@ node_modules
 
 # Local Netlify folder
 .vercel
-api
