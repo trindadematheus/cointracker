@@ -6,9 +6,16 @@
             [clojure.string :as string]))
 
 (defonce asset (r/atom nil))
+(defonce priceList (r/atom []))
+
+(defn handler [response]
+  (reset! priceList (map #(:priceUsd %) (:data response)))
+  (reset! asset response))
 
 (defn get-asset-by-name [name]
-  (GET (str api-base-url (str "/assets/" name "/history?interval=d1")) {:handler (fn [response] (reset! asset response)) :response-format (json-response-format {:keywords? true})}))
+  (GET (str api-base-url (str "/assets/" name "/history?interval=d1"))
+    {:handler handler
+     :response-format (json-response-format {:keywords? true})}))
 
 (defn aboutpage [params]
   (let [{:keys [path]} (:parameters params)
@@ -17,4 +24,5 @@
     (fn []
       [:div.container.max-w-2xl.m-auto.h-screen.pt-12.px-4
        [:a {:href "/"} [:h1.text-3xl.font-bold.text-slate-800.mb-8.cursor-pointer (str "<" (string/capitalize name))]]
-       (for [asset (:data @asset)] (historyitem asset))])))
+       [:ol.border-l.border-purple-100
+        (for [asset (:data @asset)] (historyitem asset))]])))
