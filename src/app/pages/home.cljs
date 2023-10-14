@@ -2,7 +2,7 @@
   (:require
    [ajax.core :refer [GET json-response-format]]
    [reagent.core :as r]
-   [app.api.coincap :refer [api-base-url]]
+   [app.service.coincap :refer [api-base-url]]
    [app.components.coinitem :refer [coinitem]]))
 
 (defonce assets (r/atom []))

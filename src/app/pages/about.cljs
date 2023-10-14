@@ -1,6 +1,6 @@
 (ns app.pages.about
   (:require [ajax.core :refer [GET json-response-format]]
-            [app.api.coincap :refer [api-base-url]]
+            [app.service.coincap :refer [api-base-url]]
             [app.components.historyitem :refer [historyitem]]
             [reagent.core :as r]
             [clojure.string :as string]))
