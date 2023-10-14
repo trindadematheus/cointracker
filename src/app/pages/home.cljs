@@ -14,8 +14,8 @@
 
 (defn homepage []
   (fn []
-    [:div.container.max-w-2xl.m-auto.h-screen.pt-12
+    [:div.container.max-w-2xl.m-auto.h-screen.pt-12.px-4
      [:h1.text-3xl.font-bold.text-slate-800 "Coin Tracker"]
      [:p.text-slate-600.mb-8 "Top 100 Criptomoedas por Capitalização de Mercado"]
-     [:div.grid.grid-flow-row.gap-6.grid-cols-4
+     [:div.grid.grid-flow-row.gap-6.grid-cols-2.md:grid-cols-4
       (for [asset (:data @assets)]  (coinitem asset))]]))

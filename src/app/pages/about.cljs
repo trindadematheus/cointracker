@@ -15,6 +15,6 @@
         {:keys [name]} path]
     (get-asset-by-name name)
     (fn []
-      [:div.container.max-w-2xl.m-auto.h-screen.pt-12
+      [:div.container.max-w-2xl.m-auto.h-screen.pt-12.px-4
        [:a {:href "/"} [:h1.text-3xl.font-bold.text-slate-800.mb-8.cursor-pointer (str "<" (string/capitalize name))]]
        (for [asset (:data @asset)] (historyitem asset))])))
