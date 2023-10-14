@@ -2,7 +2,8 @@
   (:require [ajax.core :refer [GET json-response-format]]
             [app.api.coincap :refer [api-base-url]]
             [app.components.historyitem :refer [historyitem]]
-            [reagent.core :as r]))
+            [reagent.core :as r]
+            [clojure.string :as string]))
 
 (defonce asset (r/atom nil))
 
@@ -15,5 +16,5 @@
     (get-asset-by-name name)
     (fn []
       [:div.container.max-w-2xl.m-auto.h-screen.pt-12
-       [:a {:href "/"} [:h1.text-3xl.font-bold.text-slate-800.mb-8.cursor-pointer (str "<" name)]]
+       [:a {:href "/"} [:h1.text-3xl.font-bold.text-slate-800.mb-8.cursor-pointer (str "<" (string/capitalize name))]]
        (for [asset (:data @asset)] (historyitem asset))])))
