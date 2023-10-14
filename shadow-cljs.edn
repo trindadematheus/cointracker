@@ -5,8 +5,11 @@
  :dependencies [[org.clojure/core.async "1.5.648"]
                 [binaryage/devtools "0.9.7"]
                 [reagent "1.1.1"]
+                [metosin/reitit "0.7.0-alpha7"]
+                [metosin/reitit-spec "0.7.0-alpha7"]
+                [metosin/reitit-frontend "0.7.0-alpha7"]
                 [com.teknql/shadow-cljs-tailwind-jit "0.2.2"]
-                [cljs-http "0.1.46"]]
+                [cljs-ajax "0.7.5"]]
 
  :builds
  {:app {:target :browser
